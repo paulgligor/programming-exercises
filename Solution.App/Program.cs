@@ -9,8 +9,20 @@ namespace Solution.App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            RunCyclicRotation();
+            RunOddOccurrencesInArray();
+            RunPermMissingElem();
+
+            Console.Read();
         }
+
+        #region Leve 1 - Iterations
+
+
+
+        #endregion
+
+        #region Level 2 - Arrays
 
         private static void RunCyclicRotation()
         {
@@ -22,16 +34,18 @@ namespace Solution.App
             }
         }
 
-        // Lever 2 Arrays
-        public static void RunOddOccurrencesInArray()
+        private static void RunOddOccurrencesInArray()
         {
             Console.WriteLine($" --------- OddOccurrencesInArray --------- ");
             var sol = OddOccurrencesInArray.Solution(new int[] { 2, 2, 3, 3, 4 });
             Console.WriteLine($"= {sol}");
         }
 
-        // Level 3 Time Complexity
-        public static void RunPermMissingElem()
+        #endregion
+
+        #region Level 3 - Time Complexity
+
+        private static void RunPermMissingElem()
         {
             Console.WriteLine($" --------- PermMissingElem --------- ");
             var maxrange = 1000000;
@@ -49,5 +63,7 @@ namespace Solution.App
             var sol3 = PermMissingElem.Solution(arrayHere);
             Console.WriteLine($"= {sol3}");
         }
+
+        #endregion
     }
 }
