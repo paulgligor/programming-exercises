@@ -15,10 +15,13 @@ namespace Solution.App
 
         static void Main(string[] args)
         {
-            RunCyclicRotation();
-            RunOddOccurrencesInArray();
-            RunPermMissingElem();
-            RunTapeEquilibrium();
+            //RunCyclicRotation();
+            //RunOddOccurrencesInArray();
+            //RunPermMissingElem();
+            //RunFrogJmp();
+            //RunTapeEquilibrium();
+
+            RunPermCheck();
 
             Console.Read();
         }
@@ -37,7 +40,7 @@ namespace Solution.App
             var sol = CyclicRotation.Solution(new int[] { 1, 2, 3, 4 }, 2);
             foreach (var item in sol)
             {
-                Console.WriteLine($"= {item}");
+                Console.WriteLine($"result = {item}");
             }
         }
 
@@ -45,12 +48,22 @@ namespace Solution.App
         {
             Console.WriteLine($" --------- 2.2 OddOccurrencesInArray --------- ");
             var sol = OddOccurrencesInArray.Solution(new int[] { 2, 2, 3, 3, 4 });
-            Console.WriteLine($"= {sol}");
+            Console.WriteLine($"result = {sol}");
         }
 
         #endregion
 
         #region Level 3 - Time Complexity
+
+        private static void RunFrogJmp()
+        {
+            Console.WriteLine($" --------- 3.1 FrogJmp --------- ");
+            var currentPosition = 10;
+            var futurePosition = 80;
+            var oneStepLength = 30;
+            var result = FrogJmp.Solution(currentPosition, futurePosition, oneStepLength);
+            Console.WriteLine($"result = {result}");
+        }
 
         private static void RunPermMissingElem()
         {
@@ -84,6 +97,18 @@ namespace Solution.App
             }
 
             var result = TapeEquilibrium.Solution(arrayHere);
+            Console.WriteLine($"result = {result}");
+        }
+
+        #endregion
+
+        #region Level 4 Counting Elements
+
+        private static void RunPermCheck()
+        {
+            Console.WriteLine($" --------- 4.1 PermCheck --------- ");
+
+            var result = PermCheck.Solution(new int[] { 4, 3, 1, 2});
             Console.WriteLine($"result = {result}");
         }
 
