@@ -15,9 +15,9 @@ namespace Solution.App
 
         static void Main(string[] args)
         {
-            //RunCyclicRotation();
-            //RunOddOccurrencesInArray();
-            //RunPermMissingElem();
+            RunCyclicRotation();
+            RunOddOccurrencesInArray();
+            RunPermMissingElem();
             RunTapeEquilibrium();
 
             Console.Read();
