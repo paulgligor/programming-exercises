@@ -34,12 +34,14 @@ namespace Solution.Service
         /// </summary>
         /// <param name="X">Current Position</param>
         /// <param name="Y">Future Position</param>
-        /// <param name="D">Steps length</param>
+        /// <param name="D">One step length</param>
         /// <returns>Required number of steps</returns>
         public static int Solution(int X, int Y, int D)
         {
-
-            return -1;
+            var distance = Y - X;
+            var result = (distance / D) + ((distance % D) > 0 ? 1 : 0);
+            
+            return result;
         }
     }
 }
