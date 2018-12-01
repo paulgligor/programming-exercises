@@ -1,3 +1,3 @@
 # Programming Exercises 
  
-using .Net Code and XUnit Frameworks with C#
+using .Net Core and XUnit Frameworks with C#
