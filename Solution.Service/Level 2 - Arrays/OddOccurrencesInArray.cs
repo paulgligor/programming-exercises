@@ -35,10 +35,10 @@ namespace Solution.Service
          */
 
         /// <summary>
-        /// 
+        /// 66% Solution
         /// </summary>
-        /// <param name="A"></param>
-        /// <returns></returns>
+        /// <param name="A">Int array</param>
+        /// <returns>Returns the value of the unpaired element</returns>
         public static int Solution(int[] A)
         {
             // write your code in C# 6.0 with .NET 4.5 (Mono)

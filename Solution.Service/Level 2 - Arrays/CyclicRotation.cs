@@ -38,11 +38,11 @@ namespace Solution.Service
         */
 
         /// <summary>
-        /// 
+        /// 100% Solution
         /// </summary>
         /// <param name="A">Int array</param>
         /// <param name="K">Number of rotations</param>
-        /// <returns></returns>
+        /// <returns>Rotated array</returns>
         public static int[] Solution(int[] A, int K)
         {
             if (A != null && A.Length > 1)

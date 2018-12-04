@@ -30,7 +30,7 @@ namespace Solution.Service
         */
 
         /// <summary>
-        /// 
+        /// 100% Solution
         /// </summary>
         /// <param name="X">Current Position</param>
         /// <param name="Y">Future Position</param>

@@ -4,21 +4,22 @@ using Xunit;
 
 namespace Solution.Tests
 {
-    public class OddOccurrencesInArrayTests
+    public class FrogJmpTests
     {
         [Fact]
         public void Solution_SmallNumbers_Correct()
         {
             //Arrange - Given
-            var array = new int[] { 2, 3, 4, 2, 3 };
+            var currentPosition = 10;
+            var futurePosition = 80;
+            var oneStepLength = 30;
 
             //Act - When
-            var result = OddOccurrencesInArray.Solution(array);
+            var result = FrogJmp.Solution(currentPosition, futurePosition, oneStepLength);
 
             //Assert - Then
-            var expectedResult = 4;
+            var expectedResult = 3;
             Assert.Equal(expectedResult, result);
-
         }
     }
 }
