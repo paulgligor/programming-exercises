@@ -20,8 +20,8 @@ namespace Solution.App
             //RunPermMissingElem();
             //RunFrogJmp();
             //RunTapeEquilibrium();
-
-            RunPermCheck();
+            //RunPermCheck();
+            RunFrogRiverOne();
 
             Console.Read();
         }
@@ -110,6 +110,18 @@ namespace Solution.App
 
             var result = PermCheck.Solution(new int[] { 4, 3, 1, 2});
             Console.WriteLine($"result = {result}");
+        }
+
+        private static void RunFrogRiverOne()
+        {
+            Console.WriteLine($" --------- 4.2 FrogRiverOne --------- ");
+
+            var result = FrogRiverOne.Solution(5, new int[] { 1, 3, 1, 4, 2, 3, 5, 4 });
+            Console.WriteLine($"result = {result}");
+            var result2 = FrogRiverOne.Solution(2, new int[] { 2, 2, 2 });
+            Console.WriteLine($"result = {result2}");
+            var result3 = FrogRiverOne.Solution(1, new int[] { 1 });
+            Console.WriteLine($"result = {result3}");
         }
 
         #endregion
