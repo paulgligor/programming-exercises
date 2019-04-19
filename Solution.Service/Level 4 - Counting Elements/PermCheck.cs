@@ -41,6 +41,9 @@ namespace Solution.Service
 
          */
 
+        /// <summary>
+        /// 75% Solution
+        /// </summary>
         public static int Solution(int[] A)
         {
             ulong totalSum = ((ulong)A.Length) * ((ulong)A.Length + 1) / 2;

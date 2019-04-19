@@ -44,6 +44,10 @@ namespace Solution.Service
 
         */
 
+
+        /// <summary>
+        /// 18% Solution
+        /// </summary>
         public static int Solution(int X, int[] A)
         {
             for (int i = 0; i < A.Length; i++)

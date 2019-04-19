@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Solution.Service.Level_4___Counting_Elements
@@ -7,7 +8,7 @@ namespace Solution.Service.Level_4___Counting_Elements
     public class MaxCounters
     {
         /*
-            You are given N counters, initially set to 0, and you have two possible operations on them:
+            ou are given N counters, initially set to 0, and you have two possible operations on them:
             increase(X) − counter X is increased by 1,
             max counter − all counters are set to the maximum value of any counter.
             A non-empty array A of M integers is given. This array represents consecutive operations:
@@ -22,7 +23,6 @@ namespace Solution.Service.Level_4___Counting_Elements
                 A[5] = 4
                 A[6] = 4
             the values of the counters after each consecutive operation will be:
-                (0, 0, 1, 0, 0)
                 (0, 0, 1, 1, 0)
                 (0, 0, 1, 2, 0)
                 (2, 2, 2, 2, 2)
@@ -30,16 +30,12 @@ namespace Solution.Service.Level_4___Counting_Elements
                 (3, 2, 2, 3, 2)
                 (3, 2, 2, 4, 2)
             The goal is to calculate the value of every counter after all operations.
-            Assume that the following declarations are given:
-            struct Results {
-              int * C;
-              int L; // Length of the array
-            };
             Write a function:
             class Solution { public int[] solution(int N, int[] A); }
             that, given an integer N and a non-empty array A consisting of M integers, returns a sequence of integers representing the values of the counters.
-            Result array should be returned as a structure Results.
+            Result array should be returned as an array of integers.
             For example, given:
+
                 A[0] = 3
                 A[1] = 4
                 A[2] = 4
@@ -53,10 +49,35 @@ namespace Solution.Service.Level_4___Counting_Elements
             each element of array A is an integer within the range [1..N + 1].
          */
 
-        public int[] Solution(int N, int[] A)
+        /// <summary>
+        ///  66% Solution
+        /// </summary>
+        public static int[] Solution(int N, int[] A)
         {
+            var resultArray = new int[N];
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] == N + 1)
+                {
+                    var maxCounter = resultArray.Max();
+                    for (int x = 0; x < N; x++)
+                    {
+                        resultArray[x] = maxCounter;
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < N; j++)
+                    {
+                        A[i] = A[i] + 1;
+                        resultArray[j] = (A[i] == N + 1) ? resultArray[j] + 1 : resultArray[j];
+                    }
+                }
+            }
 
-            return null;
+            return resultArray.Reverse<int>().ToArray();
         }
+
+
     }
 }
