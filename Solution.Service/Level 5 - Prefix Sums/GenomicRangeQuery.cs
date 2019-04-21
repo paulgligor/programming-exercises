@@ -44,10 +44,34 @@ namespace Solution.Service.Level_5___Prefix_Sums
             string S consists only of upper-case English letters A, C, G, T.
          */
 
+        /// <summary>
+        /// 37% Solution
+        /// </summary>
         public static int[] Solution(string S, int[] P, int[] Q)
         {
+            var result = new int[P.Length];
+            for (int i = 0; i < P.Length; i++)
+            {
+                var primul = Convert(S[P[i]]);
+                var aldoilea = Convert(S[Q[i]]);
+                result[i] = primul > aldoilea ? aldoilea : primul;
+            }
 
-            return null;
+            return result;
         }
+
+        private static int Convert(char letter)
+        {
+            if (letter == 'A')
+                return 1;
+            if (letter == 'C')
+                return 2;
+            if (letter == 'G')
+                return 3;
+            if (letter == 'T')
+                return 4;
+            return -1;
+        }
+
     }
 }
