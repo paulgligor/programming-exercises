@@ -37,11 +37,31 @@ namespace Solution.Service.Level_5___Prefix_Sums
             N is an integer within the range [2..100,000];
             each element of array A is an integer within the range [−10,000..10,000].
          */
-
+        
+        /// <summary>
+        /// 60% Solution
+        /// </summary>
         public static int Solution(int[] A)
         {
-
-            return -1;
+            double result = -1;
+            int position = -1;
+            for (int i = 0; i < A.Length; i++)
+            {
+                double sum = A[i];
+                for (int j = i + 1; j < A.Length; j++)
+                {
+                    sum += A[j];
+                    double value = (sum / (j - i + 1));
+                    if (result == -1 || value < result)
+                    {
+                        result = value;
+                        position = i;
+                    }
+                }
+            }
+            return position;
         }
+
+
     }
 }
