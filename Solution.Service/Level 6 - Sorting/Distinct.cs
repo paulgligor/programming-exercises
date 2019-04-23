@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Solution.Service.Level_6___Sorting
@@ -26,12 +27,20 @@ namespace Solution.Service.Level_6___Sorting
         */
 
         /// <summary>
-        /// 
+        /// 75% Solution
         /// </summary>
         public static int Solution(int[] A)
         {
+            var distinct = new List<int>();
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (!distinct.Contains(A[i]))
+                {
+                    distinct.Add(A[i]);
+                }
+            }
 
-            return -1;
+            return distinct.Count();
         }
 
     }

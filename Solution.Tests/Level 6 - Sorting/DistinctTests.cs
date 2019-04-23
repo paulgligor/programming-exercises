@@ -15,7 +15,7 @@ namespace Solution.Tests
             var result = Distinct.Solution(array);
 
             //Assert - Then
-            var expectedResult = 5;
+            var expectedResult = 3;
             Assert.Equal(expectedResult, result);
         }
     }
