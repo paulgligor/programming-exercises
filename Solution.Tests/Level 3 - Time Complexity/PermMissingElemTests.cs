@@ -3,7 +3,7 @@ using Solution.Service;
 using Xunit;
 using System.Collections.Generic;
 
-namespace Solution.Tests
+namespace Solution.Tests.Level_3___Time_Complexity
 {
     public class PermMissingElemTests
     {

@@ -51,7 +51,22 @@ namespace Solution.Service.Level_6___Sorting
         /// </summary>
         public static int Solution(int[] A)
         {
-            return -1;
+            var result = 0;
+            for (int i = 0; i < A.Length - 2; i++)
+            {
+                for (int j = i + 1; j < A.Length - 1; j++)
+                {
+                    for (int k = j + 1; k < A.Length; k++)
+                    {
+                        var value = A[i] * A[j] * A[k];
+                        if(value > result)
+                        {
+                            result = value;
+                        }
+                    }
+                }
+            }
+            return result;
         }
 
     }

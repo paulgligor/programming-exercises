@@ -2,7 +2,7 @@ using System;
 using Solution.Service;
 using Xunit;
 
-namespace Solution.Tests
+namespace Solution.Tests.Leve_2___Arrays
 {
     public class CyclicRotationTests
     {

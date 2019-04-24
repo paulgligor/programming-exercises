@@ -2,7 +2,7 @@
 using System;
 using Xunit;
 
-namespace Solution.Tests
+namespace Solution.Tests.Level_4___Counting_Elements
 {
     public class MaxCounterTests
     {

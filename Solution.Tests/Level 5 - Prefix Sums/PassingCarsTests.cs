@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace Solution.Tests
+namespace Solution.Tests.Level_5___Prefix_Sums
 {
     public class PassingCarsTests
     {
