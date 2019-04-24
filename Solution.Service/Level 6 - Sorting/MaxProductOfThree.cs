@@ -47,11 +47,12 @@ namespace Solution.Service.Level_6___Sorting
             */
 
         /// <summary>
-        /// 22% Solution
+        /// 44% Solution
+        /// Needds Performance tests
         /// </summary>
         public static int Solution(int[] A)
         {
-            var result = 0;
+            int? result = null;
             for (int i = 0; i < A.Length - 2; i++)
             {
                 for (int j = i + 1; j < A.Length - 1; j++)
@@ -59,14 +60,14 @@ namespace Solution.Service.Level_6___Sorting
                     for (int k = j + 1; k < A.Length; k++)
                     {
                         var value = A[i] * A[j] * A[k];
-                        if(value > result)
+                        if (!result.HasValue || value > result)
                         {
                             result = value;
                         }
                     }
                 }
             }
-            return result;
+            return (int)result;
         }
 
     }
