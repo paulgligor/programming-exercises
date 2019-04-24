@@ -1,4 +1,6 @@
 ﻿using Solution.Service.Level_6___Sorting;
+using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Solution.Tests.Level_6___Sorting
@@ -17,6 +19,6 @@ namespace Solution.Tests.Level_6___Sorting
             //Assert - Then
             var expectedResult = 60;
             Assert.Equal(expectedResult, result);
-        }
+        }        
     }
 }

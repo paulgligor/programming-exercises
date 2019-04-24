@@ -1,7 +1,7 @@
 ﻿using Solution.Service.Level_6___Sorting;
 using Xunit;
 
-namespace Solution.Tests
+namespace Solution.Tests.Level_6___Sorting
 {
     public class DistinctTests
     {

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Solution.Service\Solution.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>

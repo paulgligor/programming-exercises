@@ -47,7 +47,7 @@ namespace Solution.Service.Level_6___Sorting
             */
 
         /// <summary>
-        /// Solution
+        /// 22% Solution
         /// </summary>
         public static int Solution(int[] A)
         {
