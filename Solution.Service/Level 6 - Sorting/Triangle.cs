@@ -39,9 +39,8 @@ namespace Solution.Service.Level_6___Sorting
         each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
         */
 
-
         /// <summary>
-        /// Solution
+        /// 68% Solution
         /// </summary>
         public static int Solution(int[] A)
         {
@@ -52,11 +51,11 @@ namespace Solution.Service.Level_6___Sorting
                 {
                     for (int k = j + 1; k < A.Length; k++)
                     {
-                        if (A[i] + A[j] > A[k] 
-                            && A[j] + A[k] > A[i] 
+                        if (A[i] + A[j] > A[k]
+                            && A[j] + A[k] > A[i]
                             && A[k] + A[i] > A[j])
                         {
-                            result++;
+                            return 1;
                         }
                     }
                 }
