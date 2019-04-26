@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Solution.Service.Level_6___Sorting
@@ -39,11 +40,44 @@ namespace Solution.Service.Level_6___Sorting
         */
 
         /// <summary>
-        /// Solution
+        /// 62% Solution
         /// </summary>
         public static int Solution(int[] A)
         {
-            return -1;
+            var result = 0;
+            var pointA = 0;
+            var pointB = 0;
+            var pointX = 0;
+            var pointY = 0;
+            for (int i = 0; i < A.Length - 1; i++)
+            {
+                for (int j = i + 1; j < A.Length; j++)
+                {
+                    if(result > 10000000)
+                    {
+                        return -1;
+                    }
+                    pointA = i - A[i];
+                    pointB = i + A[i];
+                    pointX = j - A[j];
+                    pointY = j + A[j];
+
+                    if (
+                        (pointA <= pointX && pointX <= pointB)
+                        ||
+                        (pointA <= pointY && pointY <= pointB)
+                        ||
+                        (pointX <= pointA && pointA <= pointY)
+                        ||
+                        (pointX <= pointB && pointB <= pointY)
+                        )
+                    {
+                        result++;
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }
