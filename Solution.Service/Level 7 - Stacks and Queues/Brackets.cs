@@ -32,7 +32,7 @@ namespace Solution.Service.Level_7___Stacks_and_Queues
         private static char[] closeBracketsArray = new char[] { ')', '}', ']' };
         
         /// <summary>
-        /// Solution
+        /// 75% Solution
         /// </summary>
         public static int Solution(string S)
         {
