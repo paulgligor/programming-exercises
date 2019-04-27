@@ -28,14 +28,84 @@ namespace Solution.Service.Level_7___Stacks_and_Queues
         string S consists only of the following characters: "(", "{", "[", "]", "}" and/or ")".
         */
 
-
-
+        private static char[] openBracketsArray = new char[] { '(', '{', '[' };
+        private static char[] closeBracketsArray = new char[] { ')', '}', ']' };
+        
         /// <summary>
         /// Solution
         /// </summary>
         public static int Solution(string S)
         {
-            return -1;
+            var nextState = "";
+            for (int i = 0; i < S.Length; i++)
+            {
+                if (isOpen(S[i]))
+                {
+                    nextState = getNextState(S[i]) + nextState;
+                }
+                else if (isClosed(S[i]))
+                {
+                    if (string.IsNullOrEmpty(nextState))
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        if (S[i] == nextState[0])
+                        {
+                            nextState = nextState.Remove(0, 1);
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(nextState))
+                return 0;
+
+            return 1;
+        }
+
+        private static bool isOpen(char s)
+        {
+            for (int i = 0; i < openBracketsArray.Length; i++)
+            {
+                if (openBracketsArray[i] == s)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static bool isClosed(char s)
+        {
+            for (int i = 0; i < closeBracketsArray.Length; i++)
+            {
+                if (closeBracketsArray[i] == s)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private static string getNextState(char s)
+        {
+            for (int i = 0; i < openBracketsArray.Length; i++)
+            {
+                if (openBracketsArray[i] == s)
+                {
+                    return closeBracketsArray[i].ToString();
+                }
+            }
+
+            return string.Empty;
         }
     }
 }
